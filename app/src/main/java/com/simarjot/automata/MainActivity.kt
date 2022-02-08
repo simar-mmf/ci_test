@@ -8,6 +8,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         /**
          * making test changes on dev branch
+         * making another change on dev, and then will merge it to master
          */
         setContentView(R.layout.activity_main)
     }
