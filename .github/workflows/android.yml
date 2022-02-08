@@ -29,7 +29,7 @@ jobs:
       id: sign_app
       with:
         releaseDirectory: app/build/outputs/apk/release
-        signingKeyBase64: BBQtbBZSuYTUgfyFxExGwDnz8WPetQIDAYagFKSVWm6VHyQpvX9MgmGd48Tvok9X
+        signingKeyBase64: ${{ secrets.BASE_64_KEY }}
         alias: keyAlias
         keyStorePassword: password
         keyPassword: password
