@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ release ]
   pull_request:
-    branches: [ master ]
+    branches: [ release ]
 
 jobs:
   build:
@@ -45,7 +45,7 @@ jobs:
       id: tag
       run: |
         echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
-    - name: Create Release
+    - name: Create Release With apk artifacts
       uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
